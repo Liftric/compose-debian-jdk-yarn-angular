@@ -5,7 +5,7 @@ RUN apt update && \
     add-apt-repository --yes https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/ && \
     apt update && \
     mkdir -p /usr/share/man/man1 && \
-    apt -y install adoptopenjdk-11-hotspot
-ENV LC_ALL en_US.UTF-8
-ENV LANG en_US.UTF-8
-ENV LANGUAGE en_US:en
+    apt -y install adoptopenjdk-11-hotspot && \
+    apt -y install android-sdk
+
+ENV ANDROID_SDK_ROOT /usr/lib/android-sdk
